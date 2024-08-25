@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Simple Interest Calculator</title>
+    </head>
+
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            Amount <input type="number"  id="principal">  <br/>
+            Rate <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()"> 
+
+            <span id="rate_val">
+                10.25
+            </span>% <br/>
+
+            No. of Years 
+            <input type="number" id="years" list="all_years">
+
+            <datalist id="all_years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </datalist>
+            <br />
+
+            Interest : <span id="result"></span><br/>
+            <button onclick="compute()">Compute Interest</button>
+        </div>
+
+        <footer>
+            &#169; This Calculator belongs to Shonta
+        </footer>
+
+    </body>
+
+
+<!-- INSTRUCTIONS:
+
+    Exercise 2: Modify the HTML file
+In this exercise, you will correct any mistakes in the existing code and also add all missing tags.
+
+In the file explorer, navigate to the index.html file.
+
+All HTML files must begin with a doctype tag, to indicate that HTML content will be placed in the file. Add this tag to the beginning of index.html.
+
+
+Use the title tag to change the browser title to be “Simple Interest Calculator”. Remember that the title tag should be placed in the head section of your markup.
+Click here to see the code
+
+<title>Simple Interest Calculator</title>
+Copied!
+Move all the content which is currently in the <body> to a new <div> tag.
+
+Set the class attribute of this new div to maindiv.
+
+Modify the input id="rate" tag for the interest rate to be a slider. Recall from earlier lessons that this can be done by changing the type to range.
+
+For the rate input, add the following attributes and their corresponding values:
+min should be set to 1
+max should be set to 20
+value should be set to 10.25
+step should be set to 0.25
+
+
+Range is an elegant way to input numeric input, but the drawback is that it does not visually show value the user has selected.
+
+To show the value selected by the range, create a <span> element right after the range, with the id rate_val.
+
+Inside the <span> tag, add the text “10.25” to represent the default value (as specified above). Add a “%” outside this span tag. 
+
+The span will be updated dynamically later on, but the “%” should always remain, so this is placed outside the tag.
+
+Insert a line break after this tag, so the next input appears on a new line.
+
+Modify the input text box for “No. of Years” into a dropdown box with options 1 to 10.
+Recall from the “HTML5 Input Element” video, the correct way to insert a dropdown in HTML
+
+How to Insert a Dropdown:
+No. of Years 
+<input type="number" id="years" list="all_years">
+<datalist id="all_years">
+    <option value="1">1</option>
+    <option value="2">2</option>
+</datalist>
+
+
+Change the name of “Compute” button to “Compute Interest”.
+
+Below the “Compute Interest” button, create an empty <span> and set its id to result. This will be used to dynamically display the result of the calculation when the “Compute Interest” button is clicked.
+
+<span id="result">
+</span>
+
+
+This will be used to display the output of the user’s calculation.
+
+Outside the maindiv, add a copyright message using the <footer> tag, like below:
+
+<footer>
+    &#169; This Calculator belongs to --your name--
+</footer>
+
+Save the changes made in index.html.-->
+
+</html>
